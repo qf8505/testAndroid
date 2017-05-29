@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kokozu.hengdian.test"
+    android:versionCode="65"
+    android:versionName="2.3.6" >
+	<!-- package是自动化测试程序生成的api的package，不能和其他app一样，否则会覆盖安装 -->
+	<!-- version都是根据apk通过命令获取相应版本信息 -->
+    <uses-sdk android:minSdkVersion="14"/>
+	<!-- apk重新签名以后会弹出窗口提示package -->
+	<!-- project.properties添加以后项目才能识别成安卓自动化测试项目 -->
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.kokozu.hengdian" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <uses-library android:name="android.test.runner" />
+    </application>
+    
+    <supports-screens android:anyDensity="true"/>
+
+</manifest>
